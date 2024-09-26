@@ -19,6 +19,10 @@ const Login = () => {
     }
   };
 
+  const handleGoToPrincipal = () => {
+    navigate('/principal'); // Redireciona diretamente para a página principal
+  };
+
   return (
     <div>
       <h2>Login</h2>
@@ -35,6 +39,7 @@ const Login = () => {
         onChange={(e) => setSenha(e.target.value)}
       />
       <button onClick={handleLogin}>Entrar</button>
+      <button onClick={handleGoToPrincipal}>Acessar página principal</button>
       {error && <p>{error}</p>}
     </div>
   );
